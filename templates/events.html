@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+
+{% load staticfiles %}
+
+{% block title %} Events {% endblock %}
+
+{% block content %}
+
+
+
+    <div class="section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h6 align="center">ALL EVENTS WITH YOU</h6>
+					<br>
+					<p align="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum dolor aperiam minima unde sint, eveniet a quisquam praesentium autem nihil ducimus alias ullam facere sunt minus, deserunt, ad maiores quasi.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section">
+		<div class="content container">
+		<br>
+			<div class="row">
+				{% for eventId,eventImage,eventTitle,eventLocation,eventTime in events %}
+
+                    <div class="col-md-4">
+                        <a href="/events/{{eventId}}" class="event">
+                            <div class="col-card">
+                                <img src="{{eventImage}}" class="img-fluid">
+                                <br>
+                                <p>{{eventTitle}}</p>
+                                <p>Location: {{eventLocation}}</p>
+                                <p>Time: {{eventTime}}</p>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+			</div>
+		</div>
+	</div>
+
+
+
+{% endblock %}

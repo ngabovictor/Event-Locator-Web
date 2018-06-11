@@ -1,0 +1,40 @@
+{% extends 'admin-base.html' %}
+
+
+{% load staticfiles %}
+
+{% block title %} EventLocator administration {% endblock %}
+
+{% block content %}
+    <div class="content container">
+	<br>
+		<div class="row">
+			<div class="col-md-6 col-content">
+				<a href="/admin-users">
+					<div class="col-card dashbord-item">
+						<center><span><i class="fa fa-users fa-3x"></i></span></center>
+						<h6 align="center">Users</h6>
+					</div>
+				</a>
+			</div>
+
+			<div class="col-md-6 col-content">
+				<a href="/admin-events">
+					<div class="col-card dashbord-item">
+						<center><span><i class="fa fa-briefcase fa-3x"></i></span></center>
+						<h6 align="center">Events</h6>
+					</div>
+				</a>
+			</div>
+
+			<!--<div class="col-md-4 col-content">-->
+				<!--<a href="/admin-reservations">-->
+					<!--<div class="col-card dashbord-item">-->
+						<!--<center><span><i class="fa fa-bar-chart fa-3x"></i></span></center>-->
+						<!--<h6 align="center">Reservations</h6>-->
+					<!--</div>-->
+				<!--</a>-->
+			<!--</div>-->
+		</div>
+	</div>
+{% endblock %}

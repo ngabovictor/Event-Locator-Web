@@ -1,0 +1,57 @@
+a:hover{
+	text-decoration: none;
+}
+
+.col-content{
+	padding: 15px;
+}
+
+.col-card{
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+.dashbord-item{
+	cursor: pointer;
+	color: #000;
+}
+
+.dashbord-item:hover{
+	background-color: rgb(41,133,204);
+	color: #fff;
+}
+
+.color-grey{
+	color: grey !important;
+}
+
+.color-white{
+	color: white !important;
+}
+
+.section{
+	padding: 30px;
+}
+
+.section-grey{
+	background-color: #000;
+	color: #6c757d;
+}
+
+.social-icon{
+	padding: 15px;
+}
+
+.social-link{
+	color: grey !important;
+	text-decoration: none;
+}
+
+.social-link:hover{
+	color: #fff;
+}
+
+.event{
+	color: black;
+}

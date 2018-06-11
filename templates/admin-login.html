@@ -1,0 +1,39 @@
+{% extends 'admin-base.html' %}
+
+
+{% load staticfiles %}
+
+{% block title %} EventLocator administration Login {% endblock %}
+
+{% block content %}
+    <div class="content container">
+	<br>
+		<div class="row">
+
+            <div class="col-md-12">
+                <h6>Please login to continue</h6>
+                <br>
+                <form action="/admin-signin" method="post">
+                    {% csrf_token %}
+
+                    <div class="form-group col-md-6">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" class="form-control" placeholder="Enter email">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" class="form-control" placeholder="Enter password">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <input type="submit" value="login" class="form-control" id="submit">
+                    </div>
+                </form>
+
+                <br>
+                <p>{{message}}</p>
+            </div>
+		</div>
+	</div>
+{% endblock %}

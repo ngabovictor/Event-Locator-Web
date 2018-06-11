@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+    {% block styles %}{% endblock %}
+
+</head>
+<body>
+
+    <!-- NAVBAR -->
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	  <a class="navbar-brand" href="#">EventLocator</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav pull-right">
+	      <li class="nav-item">
+	        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+	      </li>
+
+	      <li class="nav-item">
+	        <a class="nav-link" href="/events">Events <span class="sr-only">(current)</span></a>
+	      </li>
+
+	      <li class="nav-item">
+	        <a class="nav-link" href="/">Partners <span class="sr-only">(current)</span></a>
+	      </li>
+
+	      <li class="nav-item">
+	        <a class="nav-link" href="/">About <span class="sr-only">(current)</span></a>
+	      </li>
+
+	      <li class="nav-item">
+	        <a class="nav-link" href="/">Partners <span class="sr-only">(current)</span></a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+
+    <!--CONTENTS-->
+
+    {% block content %}{% endblock %}
+
+
+
+    <!--FOOTER-->
+
+    <div class="section section-grey">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<h6>LOREM IPSUM</h6>
+					<br>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore tempora provident repudiandae, voluptate molestias doloribus vero eius optio sapiente iusto expedita, pariatur facilis placeat quidem accusantium quod quo officiis ut!</p>
+				</div>
+				<div class="col-md-4">
+					<h6>LOREM IPSUM</h6>
+					<br>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore tempora provident repudiandae, voluptate molestias doloribus vero eius optio sapiente iusto expedita, pariatur facilis placeat quidem accusantium quod quo officiis ut!</p>
+				</div>
+				<div class="col-md-4">
+					<h6>LOREM IPSUM</h6>
+					<br>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore tempora provident repudiandae, voluptate molestias doloribus vero eius optio sapiente iusto expedita, pariatur facilis placeat quidem accusantium quod quo officiis ut!</p>
+				</div>
+
+				<div class="col-md-12">
+					<center>
+						<span class="social-icon"><a href="#" class="social-link"><i class="fa fa-facebook"></i></a></span>
+						<span class="social-icon"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></span>
+						<span class="social-icon"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></span>
+						<span class="social-icon"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></span>
+					</center>
+					<br><br>
+					<p align="center">&copyCopyright EventLocator 2018</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	<script src="{% static 'js/main.js' %}"></script>
+	<script src="{% static 'js/wow.min.js' %}"></script>
+
+    {% block scripts %}{% endblock %}
+</body>
+</html>

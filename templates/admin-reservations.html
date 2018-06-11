@@ -1,0 +1,26 @@
+{% extends 'admin-base.html' %}
+
+
+{% load staticfiles %}
+
+{% block title %} EventLocator administration {% endblock %}
+
+{% block content %}
+    <div class="content container">
+	<br>
+		<div class="row">
+
+                {% for reservName,reservEmail,reservRef in reservations %}
+                    <div class="col-md-12">
+                        <div class="col-content">
+                            <div class="col-card">
+                                <h6>Name: {{reservName}}</h6>
+                                <h6>Email: {{reservEmail}}</h6>
+                                <h6>Reference: {{reservRef}}</h6>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+		</div>
+	</div>
+{% endblock %}

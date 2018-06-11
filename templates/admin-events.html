@@ -1,0 +1,35 @@
+{% extends 'admin-base.html' %}
+
+
+{% load staticfiles %}
+
+{% block title %} EventLocator administration {% endblock %}
+
+{% block content %}
+
+
+    <div class="content container">
+	<br>
+		<div class="row">
+			{% for eventId,eventImage,eventTitle,eventLocation,eventTime,eventPosted,eventOwner in events %}
+
+                <div class="col-md-4">
+                    <a href="admin-4events/{{eventId}}" class="event">
+                        <div class="col-content">
+                            <div class="col-card">
+                                <img src="{{eventImage}}" alt="{{eventTitle}}" class="img-fluid">
+                                <br>
+                                <p>{{eventTitle}}</p>
+                                <p>Location: {{eventLocation}}</p>
+                                <p>Time: {{eventTime}}</p>
+                                <p>Posted: {{eventPosted}}</p>
+                                <p>Owner: {{eventOwner}}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+
+		</div>
+	</div>
+{% endblock %}

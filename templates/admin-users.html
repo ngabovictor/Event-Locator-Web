@@ -1,0 +1,70 @@
+{% extends 'admin-base.html' %}
+
+
+{% load staticfiles %}
+
+{% block title %} EventLocator administration {% endblock %}
+
+{% block content %}
+    <div class="content container">
+	<br>
+		<div class="row">
+
+
+			<div class="col-md-12" id='DivIdToPrint'>
+				<h6 align="center">ALL USERS</h6>
+				<table class="table table-hover" id="users">
+
+					<thead>
+						<tr>
+							<td><b>NAME</b></td>
+							<td><b>EMAIL</b></td>
+							<td><b>PHONE</b></td>
+							<td><b>ID</b></td>
+						</tr>
+					</thead>
+
+						{% for userName,userEmail,userPhone,userId in users %}
+
+						<tbody>
+							<tr>
+
+								<td>{{userName}}</td>
+								<td>{{userEmail}}</td>
+								<td>{{userPhone}}</td>
+								<td>{{userId}}</td>
+							</tr>
+						</tbody>
+						{% endfor %}
+
+					</table>
+			</div>
+
+            <div class="col-md-12">
+                <button class="btn btn-dark" onclick='printDiv();'>Print</button>
+            </div>
+
+		</div>
+	</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+	function printDiv()
+	{
+
+	  var divToPrint=document.getElementById('DivIdToPrint');
+
+	  var newWin=window.open('','Print-Window');
+
+	  newWin.document.open();
+
+	  newWin.document.write('<html><body onload="window.print()">'+divToPrint.innerHTML+'</body></html>');
+
+	  newWin.document.close();
+
+	  setTimeout(function(){newWin.close();},10);
+
+	}
+</script>
+{% endblock %}

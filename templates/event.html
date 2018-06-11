@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+
+{% load staticfiles %}
+
+{% block title %} {{eventTitle}} {% endblock %}
+
+{% block content %}
+    <div class="section">
+		<div class="content container">
+		<br>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="col-card">
+						<img src="{{eventImage}}" alt="" class="img-fluid">
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="col-card">
+						<p>{{eventTitle}}</p>
+						<p><b>Description:</b><br> {{eventDescription}}</p>
+						<p><b>Time:</b> {{eventTime}}</p>
+						<p><b>Location:</b> {{eventLocation}}</p>
+						<p><b>Posted on:</b> {{eventPostedOn}}</p>
+						<p><b>Posted by:</b> {{eventOwner}}</p>
+						<p><b>Owner contacts:</b> {{eventOwnerEmail}}</p>
+						<p><b>Map coordinates:</b> {{eventLatitude}}, {{eventLongitude}}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

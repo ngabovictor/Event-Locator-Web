@@ -1,0 +1,59 @@
+{% extends 'admin-base.html' %}
+
+
+{% load staticfiles %}
+
+{% block title %} EventLocator administration {% endblock %}
+
+{% block content %}
+
+    <div class="content container">
+	<br>
+		<div class="row">
+
+            <div class="col-md-4">
+                <img src="{{eventImage}}" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-8">
+                <h6>Title: {{eventTitle}}</h6>
+                <p>Description: {{eventDescription}}</p>
+                <p>Location: {{eventLocation}}</p>
+                <p>Time: {{eventTime}}</p>
+                <p>Map coordinates: {{eventLatitude}}, {{eventLongitude}}</p>
+            </div>
+
+            <br>
+
+            <div class="col-md-6">
+                <div class="col-card">
+                    <h5>RESERVATIONS</h5>
+                    <br>
+                    {% for reservName,reservEmail,reservRef in reservations %}
+                        <div class="col-content">
+                            <div class="col-card">
+                                <h6>Name: {{reservName}}</h6>
+                                <h6>Email: {{reservEmail}}</h6>
+                                <h6>Reference: {{reservRef}}</h6>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="col-card">
+                    <h5>COMMENTS</h5>
+                    <br>
+                    {% for comName,comComent in comments %}
+                        <div class="col-content">
+                            <div class="col-card">
+                                <h6>Name: {{comName}}</h6>
+                                <p>{{comComent}}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+		</div>
+	</div>
+{% endblock %}
