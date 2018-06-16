@@ -22,12 +22,12 @@ import pyrebase
 
 
 config = {
-  "apiKey": "your api key",
-  "authDomain": "auth domain",
-  "databaseURL": "database url",
-  "storageBucket": "storage bucket",
-  "projectId": "project id",
-  "messagingSenderId": "msg sender id"
+  "apiKey": "AIzaSyCY1vcU0MElwKuY2bqnA2tGn-jH-nyTGcY",
+  "authDomain": "eventlocator-2c25e.firebaseapp.com",
+  "databaseURL": "https://eventlocator-2c25e.firebaseio.com",
+  "storageBucket": "eventlocator-2c25e.appspot.com",
+  "projectId": "eventlocator-2c25e",
+  "messagingSenderId": "521707283496"
 }
 
 firebase = pyrebase.initialize_app(config)
